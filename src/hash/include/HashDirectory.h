@@ -1,6 +1,7 @@
 #ifndef HASH_H
 #define HASH_H
 #include <HashBucket.h>
+#include <string>
 
 using namespace std;
 
@@ -12,7 +13,7 @@ public:
 
 private:
     unsigned short int global_depth_;
-    std::vector<HashBucket*> directory_;
+    std::vector<string> directory_;
 };
 
 #endif //HASH_H
