@@ -1,10 +1,14 @@
 #include "HashDirectory.h"
 
 #include <utility>
+#include <string>
+#include <vector>
+
+using namespace std;
 
 HashDirectory::HashDirectory(
     const unsigned short int global_depth,
-    std::vector<HashBucket*> directory) : global_depth_(global_depth), directory_(std::move(directory))
+    vector<string> directory) : global_depth_(global_depth), directory_(directory)
 {
 }
 

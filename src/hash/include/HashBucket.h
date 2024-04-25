@@ -9,37 +9,37 @@ using namespace std;
 class HashBucket
 {
 public:
-    HashBucket(const std::string path, unsigned short int local_depth,
-               std::vector<std::tuple<unsigned short int, unsigned short int>> entries);
+    HashBucket(const string path, unsigned short int local_depth,
+               vector<tuple<unsigned short int, unsigned short int>> entries);
 
     static bool create(
-        const std::string path,
+        const string path,
         unsigned short int local_depth,
-        std::vector<std::pair<unsigned short int, unsigned short int>> entries);
+        vector<tuple<unsigned short int, unsigned short int>> entries);
 
     static bool update_local_depth(
-        const std::string path,
+        const string path,
         unsigned short int local_depth
     );
 
     static bool insert(
-        const std::string path,
-        std::pair<unsigned short int, unsigned short int> entry
+        const string path,
+        tuple<unsigned short int, unsigned short int> entry
     );
 
     static bool remove(
-        const std::string path,
-        std::pair<unsigned short int, unsigned short int> entry
+        const string path,
+        tuple<unsigned short int, unsigned short int> entry
     );
 
-    static std::pair<unsigned short int, std::vector<std::pair<unsigned short int, unsigned short int>>> read(
-        const std::string path
+    static tuple<unsigned short int, vector<tuple<unsigned short int, unsigned short int>>> read(
+        const string path
     );
 
 private:
-    const char* path_;
+    const string path_;
     unsigned short int local_depth_;
-    std::vector<std::tuple<unsigned short int, unsigned short int>> entries_;
+    vector<tuple<unsigned short int, unsigned short int>> entries_;
 };
 
 
