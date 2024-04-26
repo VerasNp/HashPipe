@@ -1,6 +1,8 @@
 #include <fstream>
 #include <iostream>
 #include <string>
+#include <tuple>
+
 #include "Database.h"
 
 using namespace std;

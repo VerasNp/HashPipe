@@ -5,6 +5,8 @@
 
 #include "Database.h"
 
+#include <tuple>
+
 
 Database::Database(const string &tablesDir) {
     set_tablesDir(tablesDir);
